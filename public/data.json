@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Dreamy Room",
+    "desc": "Spacious and comfortable, this modern furnished room offers a queen-size bed and breathtaking views.",
+    "size": 25,
+    "beds": 1,
+    "capacity": 2,
+    "price": 120,
+    "photo": "room_1.png"
+  },
+  {
+    "id": 2,
+    "name": "Sweet Bungalow",
+    "desc": "Spacious and comfortable, this modern furnished room offers a queen-size bed and breathtaking views.",
+    "size": 50,
+    "beds": 1,
+    "capacity": 2,
+    "price": 200,
+    "photo": "room_2.png"
+  },
+  {
+    "id": 3,
+    "name": "Los Cocos Suite",
+    "desc": "If you want a little extra from your stay, you might like our superior rooms. With double doors opening onto a private terrace, you will enjoy spectacular views of our pristine beach.",
+    "size": 125,
+    "beds": 3,
+    "capacity": 4,
+    "price": 350,
+    "photo": "room_3.png"
+  },
+  {
+    "id": 4,
+    "name": "Summer Coco",
+    "desc": "For large groups of friends or families to enjoy spectacular views of our pristine beach.",
+    "size": 145,
+    "beds": 5,
+    "capacity": 7,
+    "price": 770,
+    "photo": "room_1.png"
+  }
+]

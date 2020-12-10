@@ -1,0 +1,19 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    background: white;
+}
+
+.nav a {
+    padding: 0 30px;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.logo {
+    height: 36px;
+}

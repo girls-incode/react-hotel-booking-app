@@ -1,0 +1,35 @@
+@import '../../assets/css/variables';
+
+main {
+  .card {
+    &:hover,
+    &:active {
+        box-shadow: 3px 0 5px 0 rgba(151, 151, 151, 0.23);
+        cursor: pointer;
+    }
+  }
+}
+
+.card {
+  padding: 30px;
+  border: solid 1px $color-gray-1;
+  border-radius: 0;
+
+  &:not(:last-child) {
+    border-bottom: 0;
+  }
+
+  h2 {
+    font-size: 25px;
+  }
+  > img {
+    width: 45%;
+    margin-left: -30px;
+    margin-right: 30px;
+  }
+  .price {
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+  }
+}
