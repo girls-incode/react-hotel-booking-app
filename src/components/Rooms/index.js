@@ -7,7 +7,7 @@ function Rooms() {
     const [rooms, setRooms] = useState([]);
 
     useEffect(() => {
-        fetch('./data.json')
+        fetch('./rooms.json')
             .then(res => res.json())
             .then(res => {
                 let bySpace = res.filter(r => r.capacity >= parseInt(data.adults) + parseInt(data.children))
@@ -18,7 +18,7 @@ function Rooms() {
 
     return (
         <section>
-            {rooms && rooms.map((room, i) => <Room key={i} info={room} />)}
+            {rooms && rooms.map((room, i) => <Room key={i} info={room} selected={data.room.id === room.id} />)}
         </section>
     )
 }

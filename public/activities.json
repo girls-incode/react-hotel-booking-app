@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Special dinner",
+    "desc": "In Los Cocos Bungalows we know how to make a special day bright and unforgetable. Enjoy a dinner for 2 in our lovely Greeny Restaurant for an additional €45 per couple.",
+    "capacity": 2,
+    "price": 45,
+    "photo": "activity_1.png"
+  },
+  {
+    "id": 2,
+    "name": "Surf classes",
+    "desc": "Learn the basics of surfing in our incredible bay. For only €25 per hour you will have such a great time in family and will learn a fun activity.",
+    "capacity": 2,
+    "price": 25,
+    "photo": "activity_2.png"
+  },
+  {
+    "id": 3,
+    "name": "Horse Riding",
+    "desc": "Gallop through the gorgeous greenery of one of Catalonia's most majestic natural parks on a half-day horse-riding tour from Barcelona.",
+    "capacity": 4,
+    "price": 80,
+    "photo": "activity_3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Best Museums",
+    "desc": "Visit the 6 best museums in Barcelona with Articket, the Art Passport with which you can save up to 45% and keep a memory of your visit.",
+    "capacity": 7,
+    "price": 35,
+    "photo": "activity_4.jpg"
+  }
+]

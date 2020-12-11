@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import SelectList from './../SelectList/index';
 import { useSearchValue } from '../../store/SearchContext';
-import { RoomContext } from '../../store/RoomContext';
 import { formatDateView } from '../../utils/formatDate';
 import './style.scss';
 
 function Reservation() {
     const [data, dispatch] = useSearchValue();
-    const [roomData, dispatchRoom] = useContext(RoomContext);
+    const { room } = data;
 
     return (
         <section className='card'>
@@ -16,7 +15,7 @@ function Reservation() {
             </h2>
             <div className='d-flex justify-content-between'>
                 <h3>
-                    {roomData.name}
+                    {room.name}
                 </h3>
                 <SelectList name='rooms' start={1} />
             </div>
@@ -46,17 +45,17 @@ function Reservation() {
                 </div>
                 <div>
                     <div>Room Price</div>
-                    <div>€ {roomData.price}</div>
+                    <div>€ {room.price}</div>
                 </div>
                 <div>
                     <div>
                         <div className='price'>Total</div>
                         <a href='/'>Price details &gt;</a>
                     </div>
-                    <div className='price'>€ {roomData.price}</div>
+                    <div className='price'>€ {room.price}</div>
                 </div>
             </div>
-            <a href='/' className='btn btn-primary btn-group-justified'>
+            <a href='/activities' className='btn btn-primary btn-group-justified'>
                 Continue
             </a>
         </section>

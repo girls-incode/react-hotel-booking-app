@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
 import './style.scss';
-import { RoomContext } from '../../store/RoomContext';
+import { SearchContext } from '../../store/SearchContext';
 
-function Room({ info }) {
-    const [data, dispatch] = useContext(RoomContext);
+function Room({ info, selected }) {
+    const [data, dispatch] = useContext(SearchContext);
     return (
-        <div className='card d-flex flex-row pl-0'
+        <div className={`card ${selected ? `card-active` : ``} flex flex-row pl-0`}
             onClick={ev => dispatch({
-                type: 'changeRoom',
+                type: 'changeSearch',
                 payload: {
-                    id: info.id,
-                    name: info.name,
-                    price: info.price,
+                    room: {
+                        id: info.id,
+                        name: info.name,
+                        price: info.price,
+                    }
                 }
             })}>
             <img src={`/images/${info.photo}`} alt={info.name} />

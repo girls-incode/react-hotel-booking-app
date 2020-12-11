@@ -1,12 +1,19 @@
 @import '../../assets/css/variables';
 
+@mixin card-hover {
+  box-shadow: 3px 0 5px 0 rgba(151, 151, 151, 0.23);
+  cursor: pointer;
+}
+
 main {
   .card {
     &:hover,
     &:active {
-        box-shadow: 3px 0 5px 0 rgba(151, 151, 151, 0.23);
-        cursor: pointer;
+      @include card-hover()
     }
+  }
+  .card-active {
+    @include card-hover()
   }
 }
 

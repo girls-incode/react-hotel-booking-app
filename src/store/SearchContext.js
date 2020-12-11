@@ -16,7 +16,7 @@ let defaultData = {
     current_hotel: 'cocos',
     room: {
     },
-    exra: [
+    extra: [
     ]
 };
 
@@ -52,6 +52,11 @@ const reducer = (state, action) => {
             };
             setLocalData(newData);
             return newData;
+        case 'addActivity':
+            let newState = { ...state };
+            newState[action.payload.field].push(action.payload.extra);
+            setLocalData(newState);
+            return newState;
         default:
             return state;
     }
