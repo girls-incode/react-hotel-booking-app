@@ -11,11 +11,15 @@ li {
   margin: 0;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: bold;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.75rem;
 }
 
@@ -25,6 +29,11 @@ h3 {
 
 a {
   color: $color-gray;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 .btn-primary {
@@ -40,4 +49,16 @@ a {
     background-color: $color-blue-2;
     border-color: $color-blue-3;
   }
+}
+
+.form-item {
+    min-height: 50px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    &:hover,
+    &:active,
+    &:focus {
+      border: 1px solid #ccc;
+    }
 }
