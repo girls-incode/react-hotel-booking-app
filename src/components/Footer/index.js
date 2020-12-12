@@ -4,7 +4,10 @@ import './styles.scss'
 function Footer() {
     return (
         <footer className='footer mt-5'>
-            <ul className='d-flex justify-content-center align-items-center py-4'>
+            <ul className='d-flex flex-wrap justify-content-center align-items-center py-4'>
+                <li>
+                    <img src='/images/logo_mobile.png' alt='Cocos' height='36' />
+                </li>
                 <li>
                     <span className='ico ico-logo'></span>
                 </li>
@@ -14,7 +17,7 @@ function Footer() {
                 <li>
                     <a href='/'>Privacy Policy</a>
                 </li>
-                <li className='flex-grow-1'>
+                <li>
                     <a href='/'>Partners</a>
                 </li>
                 <li>
@@ -23,8 +26,8 @@ function Footer() {
                 <li >
                     <a href='/'>Tlf: +34 987 675 432</a>
                 </li>
-                <li >
-                    <span className='ico ico-social'></span>
+                <li>
+                    <div className='ico'></div>
                 </li>
             </ul>
         </footer>

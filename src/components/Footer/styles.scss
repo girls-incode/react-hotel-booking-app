@@ -1,8 +1,43 @@
 @import '../../assets/css/variables';
 
 .footer {
-    border-top: 1px solid $color-gray-1;
-    li {
-        padding: 0 10px;
+  flex-wrap: wrap;
+  word-break: break-word;
+  border-top: 1px solid $color-gray-1;
+
+  li {
+    padding: 0 10px;
+    &:nth-child(5) {
+        flex-grow: 1;
     }
+  }
+
+  .ico {
+    width: 123px;
+    height: 40px;
+    background: url('/assets/images/footer_icons.png') no-repeat;
+    background-size: cover;
+    background-position: 100% 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .footer {
+      li {
+          &:first-child {
+            order: -2;
+            flex-basis: 50%;
+          }
+          &:nth-child(5) {
+            flex-grow: 0;
+          }
+          &:last-child {
+            order: -1;
+            flex-basis: 50%;
+            .ico {
+                float: right;
+            }
+          }
+      }
+  }
 }

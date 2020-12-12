@@ -40,3 +40,17 @@ main {
     line-height: 1.75rem;
   }
 }
+
+@media only screen and (max-width: 567px) {
+  main .card {
+    flex-direction: column !important;
+    margin-top: 60px;
+    padding-top: 0;
+    padding-left: 30px !important;
+
+    img {
+      width: 100%;
+      margin: -30px 0 20px;
+    }
+  }
+}

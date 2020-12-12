@@ -8,6 +8,7 @@ import { SearchProvider } from '../../store/SearchContext';
 
 function BookingLayout(props) {
     let bookingStep = 1;
+
     return (
         <SearchProvider>
             <RoomProvider>
@@ -17,10 +18,10 @@ function BookingLayout(props) {
                     <div className='container'>
                         <div className='row'>
                             <main className='col-md-8'>
-                                <section className='mb-5'>
+                                <section className='mb-5 mt-5 ml-2'>
                                     <h1>Rooms & Rates</h1>
                                     <p>Plan your perfect stay at our hotel</p>
-                                    <img src={`/images/book-steps-${bookingStep}.png`} width='480' alt='' />
+                                    <img src={`/images/book-steps-${bookingStep}.png`} alt='' className='w-100' />
                                 </section>
                                 {/* <Rooms /> */}
                                 {props.children}

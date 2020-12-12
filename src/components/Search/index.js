@@ -25,7 +25,7 @@ function Search() {
     const CustomInput = ({ value, onClick }) => (
         <div className='calendar' onClick={onClick}>
             <input type='text' className="form-item" value={value} />
-            <i class="bi bi-calendar-week"></i>
+            <i className="bi bi-calendar-week"></i>
         </div>
     );
 

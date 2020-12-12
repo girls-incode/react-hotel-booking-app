@@ -1,19 +1,75 @@
 .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 99;
-    background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  background: white;
 }
 
-.nav a {
+.nav {
+  a {
     padding: 0 30px;
 
     &:hover {
-        text-decoration: underline;
+      text-decoration: underline;
     }
+  }
 }
 
 .logo {
-    height: 36px;
+  height: 36px;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.navbar-toggle {
+  border: 0;
+  background: transparent;
+}
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  margin-bottom: 4px;
+  border-radius: 1px;
+  background: #4a4a4a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  from {
+    height: 10px;
+  }
+  to {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 567px) {
+  .logo {
+    display: none;
+  }
+  .mobile-nav {
+    display: block;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+    animation: grow 0.6s ease-in, fadeIn 1.6s ease-in-out both;
+  }
+  .container {
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+  }
 }

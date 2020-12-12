@@ -80,13 +80,17 @@
 @media only screen and (max-width: 567px) {
   .search-content {
     flex-direction: column;
-      > * {
+    > * {
       margin: 10px 5px;
     }
     .react-datepicker-wrapper,
-    .form-item, 
-    button {
+    .form-item,
+    .btn {
       width: 100%;
     }
   }
+}
+
+.react-datepicker__tab-loop {
+  margin: 0;
 }
