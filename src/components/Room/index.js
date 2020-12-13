@@ -16,7 +16,7 @@ function Room({ info, selected }) {
                     }
                 }
             })}>
-            <img src={`/images/${info.photo}`} alt={info.name} />
+            <img src={`/images/${info.photo}`} alt={info.name} className='card-img' />
             <div>
                 <h3>{info.name}</h3>
                 <p>{info.desc}</p>

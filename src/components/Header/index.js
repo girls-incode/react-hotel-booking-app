@@ -6,7 +6,7 @@ function Header() {
     const [show, setShow] = useState(true);
     const showClass = show ? `d-flex text-center` : `d-none`;
 
-    const getWindowSize = () => (window.innerWidth <= 567) ? setShow(false) : setShow(true);
+    const getWindowSize = () => (window.innerWidth <= 768) ? setShow(false) : setShow(true);
 
     useEffect(() => {
         window.addEventListener('resize', getWindowSize);

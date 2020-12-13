@@ -29,7 +29,7 @@ main {
   h2 {
     font-size: 25px;
   }
-  > img {
+  .card-img {
     width: 45%;
     margin-left: -30px;
     margin-right: 30px;
@@ -47,8 +47,12 @@ main {
     margin-top: 60px;
     padding-top: 0;
     padding-left: 30px !important;
+    
+    &:not(:last-child) {
+      border-bottom: solid 1px $color-gray-1;
+    }
 
-    img {
+    .card-img {
       width: 100%;
       margin: -30px 0 20px;
     }

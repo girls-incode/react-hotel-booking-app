@@ -1,10 +1,11 @@
 import React from 'react';
-import Footer from '../../components/Footer/index';
-import Header from '../../components/Header/index';
-import Reservation from '../../components/Reservation/index';
-import Search from '../../components/Search/index';
-import { RoomProvider } from '../../store/RoomContext';
-import { SearchProvider } from '../../store/SearchContext';
+import Footer from '../../../components/Footer/index';
+import Header from '../../../components/Header/index';
+import Reservation from '../../../components/Reservation/index';
+import Search from '../../../components/Search/index';
+import { RoomProvider } from '../../../store/RoomContext';
+import { SearchProvider } from '../../../store/SearchContext';
+import './style.scss';
 
 function BookingLayout(props) {
     let bookingStep = 1;
@@ -21,9 +22,8 @@ function BookingLayout(props) {
                                 <section className='mb-5 mt-5 ml-2'>
                                     <h1>Rooms & Rates</h1>
                                     <p>Plan your perfect stay at our hotel</p>
-                                    <img src={`/images/book-steps-${bookingStep}.png`} alt='' className='w-100' />
+                                    <img src={`/images/book-steps-${bookingStep}.png`} alt='' className='booking-step' />
                                 </section>
-                                {/* <Rooms /> */}
                                 {props.children}
                             </main>
                             <aside className='col-md-4'>
