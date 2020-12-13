@@ -16,10 +16,11 @@ function Activities() {
     }, [data]);
 
     return (
+        <>
         <section>
             {activities && activities.map((activity, i) => (
                 <div className={`card ${exist(activity.id) ? `card-active` : ``} flex flex-row pl-0`} key={i}>
-                    <img src={`/images/${activity.photo}`} alt={activity.name} />
+                    <img src={`/images/${activity.photo}`} className='card-img' alt={activity.name} />
                     <div>
                         <h3>{activity.name}</h3>
                         <p>{activity.desc}</p>
@@ -45,11 +46,12 @@ function Activities() {
                     </div>
                 </div>
             ))}
-            <div className='d-flex justify-content-between mt-3'>
-                <a href='/'>&lt; Back</a>
-                <a href='/'>Skip &gt;</a>
-            </div>
-        </section>
+            </section>
+        <div className='d-flex justify-content-between mt-3'>
+            <a href='/'>&lt; Back</a>
+            <a href='/'>Skip &gt;</a>
+        </div>
+        </>
     )
 }
 

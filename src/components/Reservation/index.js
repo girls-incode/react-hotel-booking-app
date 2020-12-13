@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SelectList from './../SelectList/index';
 import { useSearchValue } from '../../store/SearchContext';
+import { DiscountContext } from '../../store/DiscountContext';
 import { formatDateView } from '../../utils/formatDate';
 import './style.scss';
 
 function Reservation() {
     const [data, dispatch] = useSearchValue();
-    const { room } = data;
+    const discount = useContext(DiscountContext);
+    const { room, extra } = data;
+    const { price } = room;
 
     return (
         <section className='card'>
@@ -39,21 +42,31 @@ function Reservation() {
                 <div>{data.children} Children</div>
             </div>
             <div className='card-total'>
-                <div>
-                    <div>Promo Code</div>
-                    <div>-84%</div>
-                </div>
-                <div>
-                    <div>Room Price</div>
-                    <div>€ {room.price}</div>
-                </div>
-                <div>
+                {discount > 0 && (
+                    <>
+                        <div>
+                            <div>Promo Code</div>
+                            <div>-{discount}%</div>
+                        </div>
+                        <div>
+                            <div>Room Price</div>
+                            <div>€ <del>{price}</del></div>
+                        </div>
+                    </>
+                )}
+                <div className='mb-3'>
                     <div>
                         <div className='price'>Total</div>
-                        <a href='/'>Price details &gt;</a>
+                        {/* <a href='/'>Price details &gt;</a> */}
                     </div>
-                    <div className='price'>€ {room.price}</div>
+                    <div className='price'>€ {discount ? (price - discount / 100 * price).toFixed(2) : price}</div>
                 </div>
+                {extra && extra.map(item => (
+                    <div>
+                        <div>{item.name}</div>
+                        <div>€ {item.price}</div>
+                </div>
+                ))}
             </div>
             <a href='/activities' className='btn btn-primary btn-group-justified'>
                 Continue

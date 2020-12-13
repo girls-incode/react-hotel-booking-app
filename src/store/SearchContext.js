@@ -17,7 +17,8 @@ let defaultData = {
     room: {
     },
     extra: [
-    ]
+    ],
+    step: 1
 };
 
 function getLocalData() {

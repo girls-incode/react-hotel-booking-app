@@ -1,9 +1,13 @@
 import React, { useContext } from 'react';
 import './style.scss';
 import { SearchContext } from '../../store/SearchContext';
+import { DiscountContext } from '../../store/DiscountContext';
 
 function Room({ info, selected }) {
     const [data, dispatch] = useContext(SearchContext);
+    const discount = useContext(DiscountContext);
+    const { price } = info;
+
     return (
         <div className={`card ${selected ? `card-active` : ``} flex flex-row pl-0`}
             onClick={ev => dispatch({
@@ -30,7 +34,13 @@ function Room({ info, selected }) {
                         People: {info.capacity}
                     </div>
                     <div className='price'>
-                        € {info.price}
+                        {discount > 0 && (
+                            <>
+                                <div className='font-weight-normal text-right'><small>€ <del>{price}</del></small></div>
+                                <div>{(price - discount / 100 * price).toFixed(2)}</div>
+                            </>
+                        )}
+                        {!discount && <span>€ {price}</span>}
                     </div>
                 </div>
             </div>
