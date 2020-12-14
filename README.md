@@ -2,7 +2,9 @@
 
 ### **[Preview here](https://react-hotel-rooms-booking.netlify.app/)**
 
-<kbd><img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="900" border="2" /><kbd>
+<kbd><img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="900"/><kbd>
+<br>
+<kbd><img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-activities.png" alt="" width="900" /><kbd>
 <br>
 
 ### `Features`
