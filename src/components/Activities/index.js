@@ -15,6 +15,8 @@ function Activities() {
             .catch(err => console.log(err));
     }, [data]);
 
+    if (data.step !== 2) return null;
+
     return (
         <>
         <section>

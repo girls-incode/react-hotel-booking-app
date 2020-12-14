@@ -16,6 +16,8 @@ function Rooms() {
             .catch(err => console.log(err));
     }, [data]);
 
+    if (data.step !== 1) return null;
+
     return (
         <section>
             {rooms && rooms.map((room, i) => <Room key={i} info={room} selected={data.room.id === room.id} />)}

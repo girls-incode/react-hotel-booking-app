@@ -3,16 +3,15 @@ import SelectList from './../SelectList/index';
 import { useSearchValue } from '../../store/SearchContext';
 import { DiscountContext } from '../../store/DiscountContext';
 import { formatDateView } from '../../utils/formatDate';
-import ELink from '../../utils/ExtendedLink';
-// import { useLocation } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import './style.scss';
 
 function Reservation() {
+    let history = useHistory();
     const [data, dispatch] = useSearchValue();
     const discount = useContext(DiscountContext);
-    const { room, extra } = data;
+    const { room, extra, step } = data;
     const { price } = room;
-    // const loc = useLocation();
     const sum = (acc, cur) => acc + cur;
     const total = extra.length ? extra.map(el => el.price).reduce(sum, 0) + price : price;
 
@@ -70,16 +69,24 @@ function Reservation() {
                     </div>
                 </div>
                 {extra && extra.map(item => (
-                    <div>
+                    <div key={item.id}>
                         <div>{item.name}</div>
                         <div>€ {item.price}</div>
                     </div>
                 ))}
             </div>
-            <ELink to='/activities'
-                className='btn btn-primary btn-group-justified'>
+            <button type='button' className='btn btn-primary btn-group-justified'
+                onClick={ev => {
+                    dispatch({
+                        type: 'changeSearch',
+                        payload: {
+                            step: (step >= 3 ? 1 : step + 1)
+                        }
+                    });
+                    if (step >= 3) { history.push('/confirmation'); }
+                }}>
                 Continue
-            </ELink>
+            </button>
         </section>
     )
 }
