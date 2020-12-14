@@ -3,6 +3,8 @@ import SelectList from './../SelectList/index';
 import { useSearchValue } from '../../store/SearchContext';
 import { DiscountContext } from '../../store/DiscountContext';
 import { formatDateView } from '../../utils/formatDate';
+import ELink from '../../utils/ExtendedLink';
+// import { useLocation } from 'react-router-dom';
 import './style.scss';
 
 function Reservation() {
@@ -10,6 +12,9 @@ function Reservation() {
     const discount = useContext(DiscountContext);
     const { room, extra } = data;
     const { price } = room;
+    // const loc = useLocation();
+    const sum = (acc, cur) => acc + cur;
+    const total = extra.length ? extra.map(el => el.price).reduce(sum, 0) + price : price;
 
     return (
         <section className='card'>
@@ -59,18 +64,22 @@ function Reservation() {
                         <div className='price'>Total</div>
                         {/* <a href='/'>Price details &gt;</a> */}
                     </div>
-                    <div className='price'>€ {discount ? (price - discount / 100 * price).toFixed(2) : price}</div>
+                    <div className='price'>€ {discount
+                        ? (total - discount / 100 * total).toFixed(2)
+                        : total}
+                    </div>
                 </div>
                 {extra && extra.map(item => (
                     <div>
                         <div>{item.name}</div>
                         <div>€ {item.price}</div>
-                </div>
+                    </div>
                 ))}
             </div>
-            <a href='/activities' className='btn btn-primary btn-group-justified'>
+            <ELink to='/activities'
+                className='btn btn-primary btn-group-justified'>
                 Continue
-            </a>
+            </ELink>
         </section>
     )
 }

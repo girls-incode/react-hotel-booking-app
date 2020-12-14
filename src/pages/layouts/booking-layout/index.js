@@ -21,7 +21,6 @@ function BookingLayout(props) {
                 setDiscount(parseInt(promo_code[0].split("=")[1]));
             }
         }
-        console.log(discount);
     }, []);
 
     return (
