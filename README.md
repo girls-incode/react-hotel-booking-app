@@ -15,7 +15,7 @@
 - node-sass
 - bootstrap
 
-### `Run`
+### `Execute`
 > npm run start
 
 > npm run build
