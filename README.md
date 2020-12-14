@@ -14,3 +14,10 @@
 - react-router-dom
 - node-sass
 - bootstrap
+
+### `Run`
+> npm run start
+
+> npm run build
+
+> npm run test
