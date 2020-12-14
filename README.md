@@ -1,6 +1,6 @@
 ### A React application that manages the process of booking a hotel room
 
-<img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="800"/>
+<img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="800" border="2" />
 
 ### `Features`
 - responsive app
