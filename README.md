@@ -1,4 +1,4 @@
-## A React Web application that manages the process of booking a hotel room
+### A React application that manages the process of booking a hotel room
 
 ### `Features`
 - responsive app
