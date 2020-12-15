@@ -1,11 +1,28 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { SearchContext } from '../../store/SearchContext';
 import Activities from './../Activities/index';
 import Register from './../Register/index';
 import Rooms from './../Rooms/index';
 
 function BookingSteps() {
-    const [data] = useContext(SearchContext);
+    const [data, dispatch] = useContext(SearchContext);
+    const path = useLocation();
+
+    useEffect(() => {
+
+        if (data.step === 1 && data.finished) {
+            dispatch({
+                type: 'changeSearch',
+                payload: {
+                    extra: [],
+                    room: {},
+                    finished: false
+                }
+            });
+        }
+    }, []);
+
     return (
         <>
             <section className='mb-5 mt-5 ml-2'>

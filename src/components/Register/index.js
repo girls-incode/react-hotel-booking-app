@@ -2,13 +2,22 @@ import React, { useContext } from 'react';
 import { SearchContext } from '../../store/SearchContext';
 
 function Register() {
-    const [data] = useContext(SearchContext);
+    const [data, dispatch] = useContext(SearchContext);
+    const { step } = data;
 
-    if (data.step !== 3) return null;
+    if (step !== 3) return null;
 
     return (
         <div>
-            Register
+            <h1>Register Form</h1>
+            <button onClick={ev => {
+                dispatch({
+                    type: 'changeSearch',
+                    payload: {
+                        step: (step <= 1 ? 1 : step - 1)
+                    }
+                })
+            }} className='btn'>&lt; Back</button>
         </div>
     )
 }

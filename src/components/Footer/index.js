@@ -21,10 +21,10 @@ function Footer() {
                     <a href='/'>Partners</a>
                 </li>
                 <li>
-                    <a href='/'>reservations@loscocosbungalows.com</a>
+                    <a href='/' className='dark-blue'>reservations@loscocosbungalows.com</a>
                 </li>
                 <li >
-                    <a href='/'>Tlf: +34 987 675 432</a>
+                    <a href='/' className='dark-blue'>Tlf: +34 987 675 432</a>
                 </li>
                 <li>
                     <div className='ico'></div>

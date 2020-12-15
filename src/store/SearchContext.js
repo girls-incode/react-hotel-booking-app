@@ -18,7 +18,8 @@ let defaultData = {
     },
     extra: [
     ],
-    step: 1
+    step: 1,
+    finished: false,
 };
 
 function getLocalData() {

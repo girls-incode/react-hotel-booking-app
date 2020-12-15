@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
-import Footer from '../../../components/Footer/index';
-import Header from '../../../components/Header/index';
-import Reservation from '../../../components/Reservation/index';
-import Search from '../../../components/Search/index';
-import { DiscountProvider } from '../../../store/DiscountContext';
-import { RoomProvider } from '../../../store/RoomContext';
-import { SearchProvider } from '../../../store/SearchContext';
+import Footer from '../../components/Footer/index';
+import Header from '../../components/Header/index';
+import Reservation from '../../components/Reservation/index';
+import Search from '../../components/Search/index';
+import { DiscountProvider } from '../../store/DiscountContext';
+import { RoomProvider } from '../../store/RoomContext';
+import { SearchProvider } from '../../store/SearchContext';
 import './style.scss';
 
-function BookingLayout(props) {
+function BookingLayout({ children }) {
     const [discount, setDiscount] = useState(0);
     const path = useLocation().search;
 
@@ -32,7 +32,7 @@ function BookingLayout(props) {
                         <div className='container'>
                             <div className='row'>
                                 <main className='col-md-8'>
-                                    {props.children}
+                                    {children}
                                 </main>
                                 <aside className='col-md-4'>
                                     <section className='mb-4'>

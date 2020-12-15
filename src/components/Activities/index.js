@@ -4,7 +4,7 @@ import { SearchContext } from '../../store/SearchContext';
 function Activities() {
     const [data, dispatch] = useContext(SearchContext);
     const [activities, setActivities] = useState([]);
-    const { extra } = data;
+    const { extra, step } = data;
 
     const exist = (id) => extra.length && extra.filter(e => e.id === id).length;
 
@@ -50,8 +50,22 @@ function Activities() {
             ))}
             </section>
         <div className='d-flex justify-content-between mt-3'>
-            <a href='/'>&lt; Back</a>
-            <a href='/'>Skip &gt;</a>
+                <button onClick={ev => {
+                    dispatch({
+                        type: 'changeSearch',
+                        payload: {
+                            step: (step <= 1 ? 1 : step - 1)
+                        }
+                    })
+                }} className='btn'>&lt; Back</button>
+                <button onClick={ev => {
+                    dispatch({
+                        type: 'changeSearch',
+                        payload: {
+                            step: (step >= 3 ? 1 : step + 1)
+                        }
+                    });
+                }} className='btn'>Skip &gt;</button>
         </div>
         </>
     )

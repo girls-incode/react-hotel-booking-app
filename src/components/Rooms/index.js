@@ -3,7 +3,7 @@ import { SearchContext } from '../../store/SearchContext';
 import Room from '../Room/index';
 
 function Rooms() {
-    const [data, dispatch] = useContext(SearchContext);
+    const [data] = useContext(SearchContext);
     const [rooms, setRooms] = useState([]);
 
     useEffect(() => {

@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import SelectList from './../SelectList/index';
-import { useSearchValue } from '../../store/SearchContext';
-import { DiscountContext } from '../../store/DiscountContext';
-import { formatDateView } from '../../utils/formatDate';
 import { useHistory } from "react-router-dom";
+import { DiscountContext } from '../../store/DiscountContext';
+import { useSearchValue } from '../../store/SearchContext';
+import { formatDateView } from '../../utils/formatDate';
+import SelectList from './../SelectList/index';
 import './style.scss';
 
 function Reservation() {
@@ -80,7 +80,8 @@ function Reservation() {
                     dispatch({
                         type: 'changeSearch',
                         payload: {
-                            step: (step >= 3 ? 1 : step + 1)
+                            step: (step >= 3 ? 1 : step + 1),
+                            finished: step >= 3 ? true : false
                         }
                     });
                     if (step >= 3) { history.push('/confirmation'); }
