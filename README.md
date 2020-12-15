@@ -1,28 +1,33 @@
 ### A React application that manages the process of booking a hotel room
 
-### **[Preview here](https://react-hotel-rooms-booking.netlify.app/)**
+#### :point_right: **[Preview here](https://react-hotel-rooms-booking.netlify.app/)**
 
-<kbd><img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="900" border="2" /><kbd>
+<kbd><img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-home.png" alt="" width="900"/></kbd>
+<br/><br/>
+<kbd>
+<img src="https://github.com/girls-incode/react-hotel-booking-app/blob/master/hotel-booking-activities-1.png" alt="" width="900" />
+</kbd>
 <br>
 
-### `Features`
-- responsive app
-- search bar with checkin & checkout calendar
-- save the selected search filters in local storage
-- update reservation summary with the search data
-- add price discount when the url has the promo_code parameter 
+### Features
+- [x] responsive app
+- [x] search bar with checkin & checkout calendar
+- [x] save the selected search filters in local storage
+- [x] update reservation summary with the search data
+- [x] add price discount when the url has the promo_code parameter 
 (website.com?promo_code=10)
 
-### `Tech Stack`
-- react
-- react-datepicker
-- react-router-dom
-- node-sass
-- bootstrap
+### Tech Stack
+- [x] react
+- [x] react-datepicker
+- [x] react-router-dom
+- [x] node-sass
+- [x] bootstrap
 
-### `Execute`
-> npm run start
+### Execute
 
-> npm run build
+`npm run start`
 
-> npm run test
+`npm run build`
+
+`npm run test`
